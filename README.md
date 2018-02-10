@@ -9,4 +9,4 @@ A small collection of Groovy system scripts that I've found useful when administ
 (I used to have a large collection once upon a time, but I'm building my toolkit back up.)
 
 ## JobDSLPerforce
-Inside this folder is an example of setting up a compartmentalized Job DSL seeder from Perforce with local Gradle testing enabled via [runGradleTests.bat](JobDSL/runGradleTests.bat).
+Inside this folder is an example of setting up a compartmentalized Job DSL seeder from Perforce with local Gradle testing enabled via [runGradleTests.bat](JobDSLPerforce/runGradleTests.bat).
