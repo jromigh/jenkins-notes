@@ -1,0 +1,32 @@
+{
+  "comment1": "This is an example configuration file for the Job DSL seeder. ",
+  "comment2": "The 'All' object will be applied to each stream first. Every Jenkins job listed in All will be generated for every stream.",
+  "comment3": "Each stream will be able to list jobs it needs that others do not.",
+  "comment4": "In this fashion, each stream will dictate how to build the software in that stream.",
+  "streams": {
+    "All": {
+      "configuationValues": {
+        "configValue": "Hello World!"
+      },
+      "jobs": [
+        "TestJob"
+      ]
+    },
+    "Main": {
+      "configuationValues": {},
+      "jobs": [
+        "MainSpecificTestJob"
+      ]
+    },
+    "Staging": {
+      "configuationValues": {},
+      "jobs": []
+    },
+    "Dev": {
+      "configuationValues": {
+        "configValue": "Develop stream specific message!"
+      },
+      "jobs": []
+    }
+  }
+}
