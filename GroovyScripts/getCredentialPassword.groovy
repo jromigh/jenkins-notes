@@ -81,7 +81,7 @@ systemCredentials.each() { credential ->
       return
     }
 
-    println sprintf("%-50s %-20s %-20s", [credentialID, credential.getUsername(), password])
+    println sprintf("%-50s %-20s %s", [credentialID, credential.getUsername(), password])
   }
 }
 
