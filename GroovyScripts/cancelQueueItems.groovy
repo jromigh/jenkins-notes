@@ -1,7 +1,8 @@
 // http://javadoc.jenkins.io/hudson/model/Queue.html
 
 // First, grab everything from the queue
-def items = Jenkins.instance.getQueue().getItems()
+def queue = Jenkins.instance.getQueue()
+def items = queue.getItems()
 
 // Iterate through the queue
 items.each() { item ->
