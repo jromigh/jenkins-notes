@@ -10,7 +10,7 @@ items.each() { item ->
   if(item.task.getName().contains("DoNotCancel")) {
     return
   } else {
-    println "Cancelling " + item.task.getFullDisplayName()
+    println "Cancelling " + item.task.getName()
     //queue.doCancelItem(item.getId()) // <-------------- Uncomment to actually cancel the items!
   }
 }
