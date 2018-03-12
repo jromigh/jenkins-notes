@@ -38,5 +38,26 @@ if (run == null) {
 
 println "Run: " + run
 
-// From here, you can perform lots of actions on the run! Just
+// From here, you can perform lots of actions on the run!
 // http://javadoc.jenkins-ci.org/hudson/model/Run.html
+
+// The following example lists all changes from this build.
+if (! run instanceof AbstractBuild) {
+  println "Cannot cast \"${run.getDisplayName()}\"(${run.getClass()}) as hudson.model.AbstractBuild, so cannot retrieve changesets."
+  return
+}
+
+run = (AbstractBuild) run
+
+println "Run Changes:"
+
+if (run.getChangeSet().isEmptySet()) {
+  println "No changes."
+} else {
+  run.getChangeSet().each() { changeset ->
+    // http://javadoc.jenkins-ci.org/hudson/scm/ChangeLogSet.Entry.html
+    println "\t- " + changeset.getCommitId() + ": " + changeset.getMsg()
+  }
+}
+
+return
